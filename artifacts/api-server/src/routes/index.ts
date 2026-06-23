@@ -5,6 +5,7 @@ import categoriesRouter from "./categories";
 import ordersRouter from "./orders";
 import warrantyRouter from "./warranty";
 import newsletterRouter from "./newsletter";
+import adminRouter from "./admin";
 
 const router: IRouter = Router();
 
@@ -14,5 +15,6 @@ router.use(categoriesRouter);
 router.use(ordersRouter);
 router.use(warrantyRouter);
 router.use(newsletterRouter);
+router.use(adminRouter);
 
 export default router;
