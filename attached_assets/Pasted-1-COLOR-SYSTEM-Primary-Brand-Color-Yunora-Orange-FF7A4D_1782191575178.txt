@@ -1,0 +1,993 @@
+1. COLOR SYSTEM
+
+Primary Brand Color
+
+
+
+Yunora Orange
+
+
+
+#FF7A4D
+
+
+
+Aa color use karvo:
+
+
+
+Buttons
+
+Active tab
+
+Wishlist count
+
+Offers strip
+
+Hover effects
+
+Icons
+
+Links
+
+Small highlights
+
+Background Colors
+
+
+
+Pure White
+
+
+
+#FFFFFF
+
+
+
+Light Grey
+
+
+
+#F7F7F7
+
+
+
+Section background alternate karva mate.
+
+
+
+Text Colors
+
+
+
+Heading:
+
+
+
+#1F1F1F
+
+
+
+Normal text:
+
+
+
+#666666
+
+
+
+Light text:
+
+
+
+#888888
+
+Border Color
+
+#EAEAEA
+
+Success Color
+
+#22C55E
+
+Error Color
+
+#EF4444
+
+2. FONT SYSTEM
+
+
+
+Entire website ma ekaj font.
+
+
+
+Recommended:
+
+
+
+Poppins
+
+
+
+Weights:
+
+
+
+400 = normal
+
+500 = medium
+
+600 = semi bold
+
+700 = bold
+
+
+
+Never mix fonts.
+
+
+
+3. BORDER RADIUS
+
+
+
+Buttons:
+
+
+
+12px
+
+
+
+Cards:
+
+
+
+18px
+
+
+
+Images:
+
+
+
+20px
+
+
+
+Popup:
+
+
+
+24px
+
+4. SHADOW SYSTEM
+
+
+
+Very soft shadows only.
+
+
+
+0px 5px 20px rgba(0,0,0,0.06)
+
+
+
+No heavy shadow.
+
+
+
+5. GLASSMORPHISM DESIGN
+
+
+
+Transparent Glass Header:
+
+
+
+background:
+
+rgba(255,255,255,0.75);
+
+
+
+backdrop-filter:
+
+blur(20px);
+
+
+
+border:
+
+1px solid rgba(255,255,255,0.3);
+
+
+
+Use glass effect only here:
+
+
+
+Header
+
+
+
+YES
+
+
+
+Login Popup
+
+
+
+YES
+
+
+
+Cart Drawer
+
+
+
+YES
+
+
+
+Mobile Bottom Navigation
+
+
+
+YES
+
+
+
+Hero Buttons
+
+
+
+NO
+
+
+
+Product Cards
+
+
+
+NO
+
+
+
+Footer
+
+
+
+NO
+
+
+
+Too much glass effect cheap lage.
+
+
+
+6. ANIMATION SYSTEM
+
+
+
+Animation duration:
+
+
+
+0.3s
+
+
+
+Maximum:
+
+
+
+0.5s
+
+
+
+Never use:
+
+
+
+Bounce
+
+Flash
+
+Zoom crazy effects
+
+7. PAGE LOAD ANIMATION
+
+
+
+Page opens:
+
+
+
+opacity 0 → 100
+
+translateY 20px → 0
+
+
+
+Duration:
+
+
+
+0.4 second
+
+
+
+8. BUTTON HOVER
+
+
+
+Normal:
+
+
+
+Orange
+
+
+
+Hover:
+
+
+
+Little darker orange.
+
+
+
+Scale:
+
+
+
+1.02
+
+
+
+Only small effect.
+
+
+
+9. PRODUCT CARD HOVER
+
+
+
+Desktop:
+
+
+
+translateY(-5px)
+
+
+
+Image zoom:
+
+
+
+scale(1.03)
+
+
+
+Mobile:
+
+
+
+No hover.
+
+
+
+10. HERO SECTION
+
+
+
+Background:
+
+
+
+White.
+
+
+
+One premium lifestyle image.
+
+
+
+Large heading.
+
+
+
+Enough empty space.
+
+
+
+Not crowded.
+
+
+
+11. OFFER STRIP
+
+
+
+Height:
+
+
+
+40px
+
+
+
+Background:
+
+
+
+Orange
+
+
+
+Text:
+
+
+
+White
+
+
+
+Auto sliding.
+
+
+
+Examples:
+
+
+
+Factory Direct Pricing
+
+
+
+Premium Quality
+
+
+
+Since 2018
+
+
+
+Free Consultation
+
+
+
+12. HEADER
+
+
+
+Desktop:
+
+
+
+Transparent glass.
+
+
+
+When scroll:
+
+
+
+White background.
+
+
+
+Shadow appears.
+
+
+
+13. MOBILE NAVIGATION
+
+
+
+Reference screenshot jevu.
+
+
+
+Glass effect.
+
+
+
+Blur:
+
+
+
+20px
+
+
+
+Top border:
+
+
+
+#ECECEC
+
+
+
+Active tab:
+
+
+
+Orange.
+
+
+
+14. CATEGORY CARDS
+
+
+
+Background:
+
+
+
+White.
+
+
+
+Icon top.
+
+
+
+Title below.
+
+
+
+Hover:
+
+
+
+Soft shadow.
+
+
+
+15. PRODUCT PAGE
+
+
+
+Animations:
+
+
+
+Photo change fade.
+
+
+
+Color select:
+
+
+
+Orange border.
+
+
+
+Size select:
+
+
+
+Orange fill.
+
+
+
+Accordion:
+
+
+
+Smooth open-close.
+
+
+
+16. CART DRAWER
+
+
+
+Right side slide.
+
+
+
+Background white.
+
+
+
+Glass top section.
+
+
+
+Smooth animation.
+
+
+
+Duration:
+
+
+
+0.35 second.
+
+
+
+17. LOGIN POPUP
+
+
+
+Glass effect.
+
+
+
+Center screen.
+
+
+
+Background blur.
+
+
+
+Fade animation.
+
+
+
+Scale:
+
+
+
+0.95 → 1
+
+
+
+18. PRELOADER
+
+
+
+White background.
+
+
+
+Logo center.
+
+
+
+Animation:
+
+
+
+Fade in.
+
+
+
+Little scale.
+
+
+
+Fade out.
+
+
+
+Total:
+
+
+
+1.5 second.
+
+
+
+Premium and fast.
+
+
+
+19. FOOTER
+
+
+
+Background:
+
+
+
+#FAFAFA
+
+
+
+No black footer.
+
+
+
+Simple.
+
+
+
+Light grey border top.
+
+
+
+20. ABOUT PAGE
+
+
+
+Timeline cards.
+
+
+
+Alternating white and light grey sections.
+
+
+
+Images:
+
+
+
+Rounded corners.
+
+
+
+Fade animation.
+
+
+
+21. CONTACT PAGE
+
+
+
+Store image top.
+
+
+
+Map below.
+
+
+
+Cards:
+
+
+
+Phone
+
+
+
+Email
+
+
+
+Address
+
+
+
+WhatsApp
+
+
+
+All white cards.
+
+
+
+22. WARRANTY PAGE
+
+
+
+Large cards.
+
+
+
+Orange icons.
+
+
+
+White background.
+
+
+
+No clutter.
+
+
+
+23. REVIEW SECTION
+
+
+
+Card slider.
+
+
+
+Soft shadows.
+
+
+
+Customer image optional.
+
+
+
+24. IMAGE STYLE
+
+
+
+Border radius:
+
+
+
+20px
+
+
+
+Object-fit:
+
+
+
+cover
+
+
+
+Lazy load.
+
+
+
+No stretched images.
+
+
+
+25. SPACING SYSTEM
+
+
+
+Small:
+
+
+
+16px
+
+
+
+Medium:
+
+
+
+24px
+
+
+
+Large:
+
+
+
+40px
+
+
+
+Section gap:
+
+
+
+80px
+
+
+
+26. ICON STYLE
+
+
+
+Only:
+
+
+
+Lucide Icons.
+
+
+
+Stroke width:
+
+
+
+1.8
+
+
+
+Color:
+
+
+
+Grey or Orange.
+
+
+
+27. FRAMER MOTION RULES
+
+
+
+Use only:
+
+
+
+Fade
+
+
+
+Slide up
+
+
+
+Scale small
+
+
+
+No crazy animation.
+
+
+
+28. WEBSITE FEEL
+
+
+
+User ne aavu feel thavu joie:
+
+
+
+"Aa koi local cheap website nathi."
+
+
+
+Pan:
+
+
+
+"Aa premium luxury furnishing brand chhe."
+
+
+
+Inspirations:
+
+
+
+Kurlon
+
+Duroflex
+
+Sleepwell
+
+Pepperfry
+
+IKEA
+
+VERY IMPORTANT RULE
+
+
+
+❌ Gradient everywhere
+
+
+
+❌ Too many colors
+
+
+
+❌ Neon effects
+
+
+
+❌ Heavy shadows
+
+
+
+❌ Glass effect everywhere
+
+
+
+❌ Too many animations
+
+
+
+❌ Fancy fonts
+
+
+
+❌ Emoji
+
+
+
+❌ Crowded UI
+
+
+
+FINAL DESIGN FEEL: Apple + Duroflex + Kurlon + IKEA + Premium Indian Luxury Brand

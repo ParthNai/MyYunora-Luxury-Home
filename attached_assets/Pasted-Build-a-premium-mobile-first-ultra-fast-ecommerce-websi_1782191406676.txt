@@ -1,0 +1,488 @@
+Build a premium, mobile-first, ultra-fast ecommerce website for Yunora Universal, a luxury home furnishing manufacturer based in Palanpur, Gujarat.
+
+Brand Identity
+
+Brand Name: Yunora Universal
+
+Tagline:
+Manufacturing Premium Comfort, Crafting Beautiful Homes Since 2018
+
+Primary Color:
+Pumpkin Orange (#FF7A4D approx)
+
+Secondary Colors:
+White
+Very Light Grey (#F5F5F5)
+
+Design Style:
+
+Minimal
+Premium
+Classic
+Professional
+Luxury feel
+No unnecessary colors
+No gradients overload
+No emojis anywhere
+Same font throughout entire website
+Clean spacing
+Smooth animations only
+
+Reference Inspiration:
+
+Kurlon style
+Duroflex style
+Premium furniture brands
+Technical Stack
+
+Use:
+
+React + TypeScript
+Tailwind CSS
+Shadcn UI
+React Router
+Framer Motion
+Razorpay Integration
+Firebase Auth or Supabase Auth
+Responsive Mobile First Design
+Lazy loading everywhere
+Optimized images
+Smooth performance
+
+The website must work perfectly on:
+
+Mobile
+Tablet
+Desktop
+
+Most users are mobile users.
+
+Preloader
+
+Before website loads:
+
+Show animated Yunora logo for around 1.5–2 seconds.
+
+Simple premium animation.
+
+Background white.
+
+Fast and elegant.
+
+Authentication
+
+Login and Signup required.
+
+After Home Page loads:
+
+If user is not logged in:
+
+After 3 seconds show popup:
+
+Title:
+
+Start Your Shopping With Yunora
+
+Description:
+
+Create your account to save favourites, manage orders and enjoy a seamless shopping experience.
+
+Buttons:
+
+Login
+Sign Up
+
+Popup should be elegant and dismissible.
+
+Header
+
+Top thin offer strip with auto sliding offers.
+
+Example:
+
+Free Consultation Available
+
+Factory Direct Pricing
+
+Premium Customized Solutions
+
+Below that:
+
+Glassmorphism transparent navbar.
+
+Desktop:
+
+Hover menus with 3-4 subitems.
+
+Mobile:
+
+Hamburger menu.
+
+Pages:
+
+Home
+Shop
+Categories
+About
+Warranty
+Contact
+Account
+
+Sticky header.
+
+Home Page
+
+Maximum 3–4 scroll sections only.
+
+Section 1:
+
+Hero Banner
+
+Luxury lifestyle image
+
+Headline:
+
+Crafting Luxury. Manufacturing Comfort.
+
+Subheadline:
+
+Premium Mattresses, Curtains, Sofas & Home Furnishings.
+
+Buttons:
+
+Shop Now
+Customize Product
+
+Section 2:
+
+Categories
+
+Mattresses
+
+Curtains
+
+Sofas
+
+Pillows
+
+Bedsheets
+
+Bean Bags
+
+Section 3:
+
+Featured Products
+
+Dynamic products.
+
+Products will be added later by uploaded images.
+
+Section 4:
+
+Why Choose Yunora
+
+Factory Direct
+
+Premium Quality
+
+Customization
+
+Professional Installation
+
+Since 2018
+
+Footer
+
+Minimal premium footer.
+
+Product Page
+
+Inspired by Flipkart and Amazon flow.
+
+Top:
+
+3–4 product images.
+
+Below:
+
+Color options.
+
+Size options.
+
+Sub-size options if available.
+
+Price.
+
+Short description.
+
+Quantity selector.
+
+Buttons:
+
+Add to Cart
+
+Buy Now
+
+Wishlist
+
+Customize Product
+
+Customization options:
+
+Option 1
+
+WhatsApp consultation.
+
+Option 2
+
+Form based customization.
+
+Fields:
+
+Length
+
+Width
+
+Height
+
+Fabric
+
+Notes
+
+Automatically calculate size summary.
+
+After submit:
+
+Generate WhatsApp message.
+
+Send to Yunora.
+
+Marketplace Trust Section
+
+Display:
+
+Amazon logo
+
+Flipkart logo
+
+Clicking them opens Yunora listings.
+
+Product Information
+
+Small image with short paragraph.
+
+Then bullet sections:
+
+Features
+
+Warranty
+
+Guarantee
+
+Installation
+
+Materials
+
+Reviews section at bottom.
+
+Entire page should finish within 2–3 swipes on mobile.
+
+Cart
+
+Modern cart.
+
+Quantity controls.
+
+Coupon support.
+
+Smooth checkout.
+
+Wishlist
+
+Simple and elegant.
+
+Checkout
+
+Use Razorpay.
+
+Collect:
+
+Name
+
+Phone
+
+Address
+
+PIN Code
+
+City
+
+State
+
+Profile Page
+
+Orders
+
+Wishlist
+
+Saved Addresses
+
+Account Details
+
+Logout
+
+Bottom Navigation Mobile
+
+Exactly like reference image.
+
+Icons:
+
+Home
+
+Categories
+
+Wishlist
+
+Account
+
+Cart
+
+Fixed bottom.
+
+About Page
+
+Use provided About Yunora content exactly.
+
+Break into sections with only 2–3 images.
+
+Professional typography.
+
+Timeline section.
+
+Vision section.
+
+Mission section.
+
+Team section.
+
+No excessive images.
+
+Contact Page
+
+Show:
+
+Phone:
++91 96248 18530
+
+Email:
+info@myyunora.com
+
+WhatsApp button
+
+Store image
+
+Address section
+
+Google map embed
+
+Instagram button
+
+Facebook button
+
+Warranty Hub Page
+
+Single premium page with four cards:
+
+Warranty Registration
+
+Warranty Policy
+
+Warranty Terms
+
+Claim Warranty
+
+Each card opens dedicated page.
+
+Inspired by:
+
+Kurlon warranty pages
+
+Duroflex warranty pages
+
+Do NOT copy exact code.
+
+Only replicate functionality and structure.
+
+Footer
+
+About
+
+Contact
+
+Warranty
+
+Privacy Policy
+
+Terms
+
+Instagram
+
+Facebook
+
+Copyright
+
+Animations
+
+Use Framer Motion.
+
+Subtle animations only.
+
+No flashy effects.
+
+Performance
+
+Website must feel extremely smooth.
+
+Fast loading.
+
+Image lazy loading.
+
+No lag.
+
+No layout shift.
+
+No unnecessary libraries.
+
+Product Management
+
+I will upload around 18 product images later.
+
+Create dynamic JSON structure so products can easily be added.
+
+SEO
+
+Add:
+
+Meta title
+
+Meta description
+
+Open Graph
+
+Schema markup
+
+Final Goal
+
+The website should feel like a premium Indian luxury furnishing brand.
+
+Users should feel:
+
+Trust
+
+Comfort
+
+Luxury
+
+Professionalism
+
+Factory-direct quality

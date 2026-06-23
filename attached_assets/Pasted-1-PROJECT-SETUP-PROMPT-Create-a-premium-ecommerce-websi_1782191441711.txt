@@ -1,0 +1,513 @@
+1. PROJECT SETUP PROMPT
+
+Create a premium ecommerce website called "Yunora Universal".
+
+Use:
+
+React + TypeScript
+Vite
+Tailwind CSS
+Shadcn UI
+React Router DOM
+Framer Motion
+Lucide Icons
+Zustand for state management
+Razorpay integration support
+Firebase/Supabase support
+Responsive mobile-first layout
+
+Theme:
+
+Primary color:
+Pumpkin Orange (#FF7A4D)
+
+Secondary colors:
+
+White
+Light Grey
+
+Font:
+
+Use only ONE font throughout the entire website.
+
+Recommended:
+
+Poppins
+
+The design must look:
+
+Luxury
+Professional
+Minimal
+Classic
+Premium
+
+No flashy effects.
+
+No emojis.
+
+Folder Structure:
+
+components/
+pages/
+layouts/
+hooks/
+lib/
+context/
+data/
+assets/
+types/
+
+Create:
+
+Navbar
+Footer
+Offer Strip
+Bottom Navigation
+Reusable Button
+Product Card
+Modal Components
+
+Optimize for mobile users.
+
+2. AUTHENTICATION PROMPT
+
+Create authentication system.
+
+Features:
+
+Login
+
+Signup
+
+Forgot Password
+
+Logout
+
+Protected Profile Page
+
+Use Firebase Authentication.
+
+Fields:
+
+Name
+
+Email
+
+Phone
+
+Password
+
+Confirm Password
+
+After Home Page loads:
+
+Wait 3 seconds.
+
+If user is not logged in:
+
+Show elegant popup.
+
+Title:
+
+Start Your Shopping With Yunora
+
+Text:
+
+Create your account to save favourites and manage orders.
+
+Buttons:
+
+Login
+
+Sign Up
+
+Popup should be closable.
+
+Modern white card.
+
+Subtle animation.
+
+3. HOME PAGE PROMPT
+
+Create luxury Home Page.
+
+Maximum 4 sections only.
+
+Section 1:
+
+Hero Banner.
+
+Heading:
+
+Crafting Luxury. Manufacturing Comfort.
+
+Subheading:
+
+Premium Mattresses, Curtains, Sofas and Home Furnishings Since 2018.
+
+Buttons:
+
+Shop Now
+
+Customize Product
+
+Section 2:
+
+Categories
+
+Mattresses
+
+Curtains
+
+Sofas
+
+Bedsheets
+
+Pillows
+
+Bean Bags
+
+Use clean cards.
+
+Section 3:
+
+Featured Products.
+
+Dynamic products.
+
+Products will come from JSON.
+
+Section 4:
+
+Why Choose Yunora.
+
+Factory Direct Pricing
+
+Customization
+
+Premium Materials
+
+Professional Installation
+
+Since 2018
+
+Sticky transparent glass navbar.
+
+Top offer strip slider.
+
+Fixed bottom navigation for mobile.
+
+4. PRODUCT SYSTEM PROMPT
+
+Create complete ecommerce product system.
+
+Product page inspired by Amazon and Flipkart.
+
+Top:
+
+Image gallery with 4 images.
+
+Thumbnail images below.
+
+Product details:
+
+Title
+
+Price
+
+Description
+
+Color options
+
+Size options
+
+Sub-size options
+
+Quantity selector
+
+Buttons:
+
+Wishlist
+
+Add To Cart
+
+Buy Now
+
+Customize Product
+
+Marketplace trust section:
+
+Show Amazon logo.
+
+Show Flipkart logo.
+
+Click opens external listing.
+
+Below:
+
+Features
+
+Materials
+
+Installation
+
+Warranty
+
+Guarantee
+
+Reviews
+
+Product page should finish in 2-3 mobile swipes.
+
+Use dynamic JSON.
+
+I will upload around 18 products later.
+
+5. CART + WISHLIST PROMPT
+
+Create elegant cart system.
+
+Features:
+
+Add To Cart
+
+Remove Item
+
+Increase Quantity
+
+Decrease Quantity
+
+Subtotal
+
+Coupon section
+
+Delivery charge
+
+Grand Total
+
+Wishlist page:
+
+Save products.
+
+Move to cart.
+
+Remove product.
+
+Use Zustand state management.
+
+Smooth animations.
+
+6. CHECKOUT PROMPT
+
+Create premium checkout.
+
+Collect:
+
+Full Name
+
+Phone Number
+
+Address
+
+State
+
+City
+
+PIN Code
+
+Order Summary
+
+Payment Method:
+
+Razorpay
+
+Show:
+
+Subtotal
+
+Delivery
+
+Grand Total
+
+Success Page after payment.
+
+7. WARRANTY SECTION PROMPT
+
+Create dedicated Warranty Hub.
+
+Main page contains four cards:
+
+Warranty Registration
+
+Warranty Policy
+
+Warranty Terms
+
+Claim Warranty
+
+Each card opens separate page.
+
+Style inspired by:
+
+Kurlon
+
+Duroflex
+
+Do not copy code.
+
+Maintain same branding.
+
+Product pages should also contain warranty links.
+
+8. ABOUT PAGE PROMPT
+
+Create premium About Page.
+
+Use the exact content provided by me.
+
+Sections:
+
+Journey Since 2018
+
+What Yunora Does
+
+Why Choose Yunora
+
+Vision
+
+Mission
+
+Team
+
+Experience Yunora
+
+Only 2-3 images.
+
+Professional typography.
+
+Timeline style section.
+
+White background.
+
+Premium spacing.
+
+9. CONTACT PAGE PROMPT
+
+Create Contact Page.
+
+Show:
+
+Phone:
+
++91 96248 18530
+
+Email:
+
+info@myyunora.com
+
+WhatsApp button
+
+Instagram button
+
+Facebook button
+
+Store image
+
+Address section
+
+Embedded Google Map
+
+Working Hours section
+
+Responsive design.
+
+10. PERFORMANCE OPTIMIZATION PROMPT
+
+Optimize entire website.
+
+Requirements:
+
+Lazy loading images.
+
+Code splitting.
+
+React Suspense.
+
+Fast page transitions.
+
+No lag.
+
+No CLS issues.
+
+No unnecessary libraries.
+
+Compress images.
+
+Mobile-first optimization.
+
+Maintain 90+ Lighthouse score.
+
+Website should feel smooth like a premium brand.
+
+EXTRA MODULE (PRELOADER)
+
+Create luxury preloader.
+
+Show Yunora logo.
+
+Duration:
+
+1.5–2 seconds.
+
+White background.
+
+Smooth fade animation.
+
+Fast loading.
+
+EXTRA MODULE (CUSTOMIZATION SYSTEM)
+
+Provide two methods.
+
+Method 1:
+
+WhatsApp Consultation Button.
+
+Method 2:
+
+Form.
+
+Fields:
+
+Length
+
+Width
+
+Height
+
+Fabric Type
+
+Notes
+
+Generate WhatsApp message automatically.
+
+Send details to Yunora.
+
+EXTRA MODULE (BOTTOM NAVIGATION)
+
+Mobile fixed navigation exactly like your screenshot.
+
+Tabs:
+
+Home
+
+Categories
+
+Wishlist
+
+Account
+
+Cart
+
+Highlight active tab with Yunora orange color.

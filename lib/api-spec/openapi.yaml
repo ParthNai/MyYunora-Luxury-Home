@@ -1,22 +1,30 @@
 openapi: 3.1.0
 info:
-  # Do not change the title, if the title changes, the import paths will be broken
   title: Api
   version: 0.1.0
-  description: API specification
+  description: Yunora ecommerce API
 servers:
   - url: /api
     description: Base API path
 tags:
   - name: health
     description: Health operations
+  - name: products
+    description: Product operations
+  - name: categories
+    description: Category operations
+  - name: orders
+    description: Order operations
+  - name: warranty
+    description: Warranty operations
+  - name: newsletter
+    description: Newsletter operations
 paths:
   /healthz:
     get:
       operationId: healthCheck
       tags: [health]
       summary: Health check
-      description: Returns server health status
       responses:
         "200":
           description: Healthy
@@ -24,6 +32,178 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+
+  /products:
+    get:
+      operationId: listProducts
+      tags: [products]
+      summary: List all products with optional filters
+      parameters:
+        - name: category
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: search
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: sort
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: [price_asc, price_desc, newest, popular]
+        - name: minPrice
+          in: query
+          required: false
+          schema:
+            type: number
+        - name: maxPrice
+          in: query
+          required: false
+          schema:
+            type: number
+      responses:
+        "200":
+          description: List of products
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Product"
+
+  /products/featured:
+    get:
+      operationId: listFeaturedProducts
+      tags: [products]
+      summary: List featured products for homepage
+      responses:
+        "200":
+          description: Featured products
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Product"
+
+  /products/{id}:
+    get:
+      operationId: getProduct
+      tags: [products]
+      summary: Get a single product by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Product"
+        "404":
+          description: Not found
+
+  /categories:
+    get:
+      operationId: listCategories
+      tags: [categories]
+      summary: List all product categories
+      responses:
+        "200":
+          description: Categories list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Category"
+
+  /orders:
+    post:
+      operationId: createOrder
+      tags: [orders]
+      summary: Create a new order
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/OrderInput"
+      responses:
+        "201":
+          description: Order created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Order"
+        "400":
+          description: Validation error
+
+  /warranty/register:
+    post:
+      operationId: registerWarranty
+      tags: [warranty]
+      summary: Register a product warranty
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WarrantyRegistrationInput"
+      responses:
+        "201":
+          description: Warranty registered
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WarrantyRegistration"
+
+  /warranty/claim:
+    post:
+      operationId: claimWarranty
+      tags: [warranty]
+      summary: Submit a warranty claim
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WarrantyClaimInput"
+      responses:
+        "201":
+          description: Claim submitted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WarrantyClaim"
+
+  /newsletter/subscribe:
+    post:
+      operationId: subscribeNewsletter
+      tags: [newsletter]
+      summary: Subscribe to newsletter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewsletterInput"
+      responses:
+        "201":
+          description: Subscribed successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NewsletterSubscription"
+
 components:
   schemas:
     HealthStatus:
@@ -31,6 +211,223 @@ components:
       properties:
         status:
           type: string
-      required:
-        - status
+      required: [status]
 
+    Product:
+      type: object
+      required: [id, name, slug, price, category, images, shortDescription, inStock]
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        slug:
+          type: string
+        price:
+          type: number
+        originalPrice:
+          type: ["number", "null"]
+        category:
+          type: string
+        subcategory:
+          type: ["string", "null"]
+        images:
+          type: array
+          items:
+            type: string
+        shortDescription:
+          type: string
+        description:
+          type: ["string", "null"]
+        features:
+          type: array
+          items:
+            type: string
+        colors:
+          type: array
+          items:
+            type: string
+        sizes:
+          type: array
+          items:
+            type: string
+        warrantyYears:
+          type: ["integer", "null"]
+        rating:
+          type: ["number", "null"]
+        reviewCount:
+          type: ["integer", "null"]
+        inStock:
+          type: boolean
+        isFeatured:
+          type: boolean
+        badge:
+          type: ["string", "null"]
+        material:
+          type: ["string", "null"]
+
+    Category:
+      type: object
+      required: [id, name, slug, productCount]
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        slug:
+          type: string
+        image:
+          type: ["string", "null"]
+        productCount:
+          type: integer
+        description:
+          type: ["string", "null"]
+
+    OrderItem:
+      type: object
+      required: [productId, quantity, price, name]
+      properties:
+        productId:
+          type: integer
+        quantity:
+          type: integer
+        price:
+          type: number
+        name:
+          type: string
+        size:
+          type: ["string", "null"]
+        color:
+          type: ["string", "null"]
+
+    OrderInput:
+      type: object
+      required: [fullName, phone, address, city, state, pinCode, items, totalAmount, paymentMethod]
+      properties:
+        fullName:
+          type: string
+        phone:
+          type: string
+        email:
+          type: ["string", "null"]
+        address:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        pinCode:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/OrderItem"
+        totalAmount:
+          type: number
+        couponCode:
+          type: ["string", "null"]
+        paymentMethod:
+          type: string
+        razorpayOrderId:
+          type: ["string", "null"]
+
+    Order:
+      type: object
+      required: [id, orderId, status, totalAmount, createdAt]
+      properties:
+        id:
+          type: integer
+        orderId:
+          type: string
+        status:
+          type: string
+        totalAmount:
+          type: number
+        fullName:
+          type: string
+        phone:
+          type: string
+        createdAt:
+          type: string
+
+    WarrantyRegistrationInput:
+      type: object
+      required: [fullName, phone, productName, purchaseDate, invoiceNumber]
+      properties:
+        fullName:
+          type: string
+        phone:
+          type: string
+        email:
+          type: ["string", "null"]
+        productName:
+          type: string
+        purchaseDate:
+          type: string
+        invoiceNumber:
+          type: string
+        dealerName:
+          type: ["string", "null"]
+
+    WarrantyRegistration:
+      type: object
+      required: [id, registrationId, status, createdAt]
+      properties:
+        id:
+          type: integer
+        registrationId:
+          type: string
+        status:
+          type: string
+        createdAt:
+          type: string
+
+    WarrantyClaimInput:
+      type: object
+      required: [fullName, phone, registrationId, issueDescription]
+      properties:
+        fullName:
+          type: string
+        phone:
+          type: string
+        email:
+          type: ["string", "null"]
+        registrationId:
+          type: string
+        issueDescription:
+          type: string
+        productName:
+          type: ["string", "null"]
+
+    WarrantyClaim:
+      type: object
+      required: [id, claimId, status, createdAt]
+      properties:
+        id:
+          type: integer
+        claimId:
+          type: string
+        status:
+          type: string
+        createdAt:
+          type: string
+
+    NewsletterInput:
+      type: object
+      required: [email]
+      properties:
+        email:
+          type: string
+        name:
+          type: ["string", "null"]
+
+    NewsletterSubscription:
+      type: object
+      required: [id, email, createdAt]
+      properties:
+        id:
+          type: integer
+        email:
+          type: string
+        createdAt:
+          type: string
