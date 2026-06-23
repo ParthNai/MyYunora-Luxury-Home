@@ -1,0 +1,385 @@
+# ENTERPRISE MODULES FOR YUNORA ADMIN PANEL
+
+---
+
+# 1. INVENTORY PURCHASE MANAGEMENT
+
+Admin should manage:
+
+Raw Materials
+
+Foam Stock
+
+Fabric Stock
+
+Wood Stock
+
+Pillow Materials
+
+Curtain Materials
+
+Packing Materials
+
+Track:
+
+Purchase Quantity
+
+Purchase Price
+
+Supplier
+
+Purchase Date
+
+Current Stock
+
+Low Stock Alerts
+
+Stock History
+
+Generate inventory reports.
+
+---
+
+# 2. SUPPLIER MANAGEMENT
+
+Store supplier information.
+
+Fields:
+
+Supplier Name
+
+Company Name
+
+Phone
+
+Email
+
+Address
+
+GST Number
+
+Products Supplied
+
+Payment Status
+
+Purchase History
+
+Admin actions:
+
+Add Supplier
+
+Edit Supplier
+
+Delete Supplier
+
+Search Supplier
+
+View Transactions
+
+---
+
+# 3. EMPLOYEE LOGIN PANEL
+
+Create separate employee accounts.
+
+Fields:
+
+Name
+
+Phone
+
+Email
+
+Role
+
+Department
+
+Password
+
+Employees should only access assigned sections.
+
+Examples:
+
+Sales Team
+
+Production Team
+
+Installation Team
+
+Manager
+
+Account Department
+
+Owner
+
+Track:
+
+Last Login
+
+Attendance
+
+Activity History
+
+---
+
+# 4. DELIVERY TRACKING SYSTEM
+
+Track:
+
+Order Status
+
+Dispatch Date
+
+Courier Name
+
+Tracking Number
+
+Estimated Delivery
+
+Delivered Date
+
+Customer can view tracking from profile page.
+
+Admin can update statuses.
+
+---
+
+# 5. REFERRAL SYSTEM
+
+Each customer gets unique referral code.
+
+Track:
+
+Referrer
+
+New Customer
+
+Reward Amount
+
+Referral History
+
+Admin can:
+
+Enable or Disable referral program.
+
+Set reward values.
+
+---
+
+# 6. LOYALTY POINTS SYSTEM
+
+Customers earn points after purchase.
+
+Admin settings:
+
+Points per order
+
+Minimum redemption
+
+Maximum redemption
+
+Points expiry
+
+Customer dashboard should show:
+
+Available Points
+
+Used Points
+
+History
+
+---
+
+# 7. ABANDONED CART RECOVERY
+
+Track customers who added products but did not complete checkout.
+
+Store:
+
+Customer Name
+
+Email
+
+Phone
+
+Products
+
+Cart Value
+
+Time
+
+Admin can:
+
+Send reminders
+
+Offer coupons
+
+Recover lost sales
+
+---
+
+# 8. EMAIL MARKETING PANEL
+
+Create campaigns.
+
+Send:
+
+Offers
+
+Festive Sales
+
+Product Launches
+
+Blogs
+
+Announcements
+
+Store:
+
+Open Rate
+
+Click Rate
+
+Delivered Count
+
+Failed Emails
+
+Email templates editable.
+
+---
+
+# 9. PUSH NOTIFICATIONS
+
+Send notifications for:
+
+Offers
+
+New Products
+
+Order Updates
+
+Blogs
+
+Announcements
+
+Admin should:
+
+Create notification
+
+Schedule notification
+
+Delete notification
+
+Enable or disable service.
+
+---
+
+# 10. MULTI ADMIN ROLES
+
+Owner
+
+Manager
+
+Sales Staff
+
+Support Staff
+
+Production Staff
+
+Permissions should be role based.
+
+Example:
+
+Owner:
+Full Access
+
+Manager:
+Limited Access
+
+Sales Staff:
+Orders and Customers only
+
+Production Team:
+Manufacturing section only
+
+Track all admin activities.
+
+---
+
+# 11. DAILY SALES REPORT SYSTEM
+
+Generate reports:
+
+Daily Revenue
+
+Weekly Revenue
+
+Monthly Revenue
+
+Best Selling Products
+
+Orders Count
+
+Pending Orders
+
+Cancelled Orders
+
+Export:
+
+PDF
+
+Excel
+
+CSV
+
+Dashboard charts included.
+
+---
+
+# 12. BACKUP & RESTORE SYSTEM
+
+Automatic database backup.
+
+Manual backup button.
+
+Restore previous backups.
+
+Store:
+
+Backup Date
+
+Backup Size
+
+Backup Status
+
+Admin should download backups.
+
+Prevent accidental data loss.
+
+---
+
+# SECURITY REQUIREMENTS
+
+Audit logs.
+
+Activity history.
+
+Password hashing.
+
+Session timeout.
+
+Role based access control.
+
+Protected APIs.
+
+Input validation.
+
+Rate limiting.
+
+No unauthorized access.
+
+Everything should be connected with the same database and same API architecture.
+
+No hardcoded data.
+
+All updates must reflect automatically across the website and admin panel.

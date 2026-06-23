@@ -1,0 +1,525 @@
+# YUNORA ADMIN PANEL MASTER PROMPT
+
+Create a completely separate and secure Admin Dashboard for Yunora Universal.
+
+Route:
+
+/admin
+
+The Admin Panel must be connected directly with the ecommerce website database and APIs so that every change made inside Admin instantly reflects on the live website.
+
+Use:
+
+React + TypeScript
+
+Tailwind CSS
+
+Shadcn UI
+
+Supabase or Firebase
+
+Protected Routes
+
+Role-based Authentication
+
+Responsive Design
+
+Desktop-first but mobile compatible
+
+Theme same as website.
+
+Primary Color:
+
+Pumpkin Orange
+
+White background
+
+Glassmorphism cards only where needed.
+
+No unnecessary colors.
+
+No emojis.
+
+---
+
+# ADMIN LOGIN
+
+Create secure login page.
+
+Default Username:
+
+YunoraAdmin
+
+Default Password:
+
+Yunora@2026
+
+After first login:
+
+Force password change.
+
+Store password hashed.
+
+Session timeout enabled.
+
+Unauthorized users cannot access any admin route.
+
+---
+
+# DASHBOARD OVERVIEW
+
+Show:
+
+Total Users
+
+Total Orders
+
+Total Revenue
+
+Pending Orders
+
+Completed Orders
+
+Products Count
+
+Out Of Stock Products
+
+Low Stock Products
+
+Recent Customers
+
+Recent Orders
+
+Charts:
+
+Monthly Sales
+
+Revenue Graph
+
+Top Selling Products
+
+---
+
+# HOME PAGE CMS
+
+Admin should be able to edit:
+
+Hero heading
+
+Hero subheading
+
+Buttons
+
+Banner images
+
+Offer strip texts
+
+Featured categories
+
+Why Choose Yunora section
+
+Homepage photos
+
+Popup login content
+
+All changes should update website automatically.
+
+---
+
+# LOGIN POPUP CMS
+
+Admin can edit:
+
+Title
+
+Description
+
+Button text
+
+Enable/Disable popup
+
+Delay timing
+
+Banner image
+
+---
+
+# OFFER STRIP CMS
+
+Admin can:
+
+Add offer
+
+Edit offer
+
+Delete offer
+
+Change order
+
+Enable or disable offer
+
+Auto slider settings
+
+---
+
+# PRODUCT MANAGEMENT
+
+Admin can:
+
+Add product
+
+Edit product
+
+Delete product
+
+Duplicate product
+
+Hide product
+
+Publish product
+
+Product fields:
+
+Name
+
+SKU
+
+Price
+
+Discount
+
+Description
+
+Short Description
+
+Features
+
+Materials
+
+Warranty
+
+Guarantee
+
+Installation details
+
+Images
+
+Gallery images
+
+Size options
+
+Sub-size options
+
+Color options
+
+Stock quantity
+
+Low stock warning
+
+Category
+
+Tags
+
+Reviews
+
+---
+
+# PRODUCT MARKETPLACE LINKS
+
+Each product should have:
+
+Amazon URL
+
+Flipkart URL
+
+Admin can edit them separately.
+
+Buttons on website should update automatically.
+
+---
+
+# CUSTOMIZATION SYSTEM CMS
+
+Admin should edit:
+
+Form fields
+
+Size calculation formulas
+
+WhatsApp message template
+
+Fabric options
+
+Length options
+
+Width options
+
+Height options
+
+Enable/Disable customization
+
+---
+
+# REVIEW MANAGEMENT
+
+Admin can:
+
+Add review
+
+Edit review
+
+Delete review
+
+Approve reviews
+
+Hide reviews
+
+Customer image optional.
+
+---
+
+# ORDER MANAGEMENT
+
+Show:
+
+Pending
+
+Confirmed
+
+Processing
+
+Shipped
+
+Delivered
+
+Cancelled
+
+Search orders
+
+Filter orders
+
+View customer details
+
+Change order status
+
+Generate invoice
+
+Download invoice PDF
+
+---
+
+# USER MANAGEMENT
+
+View all users
+
+User profile
+
+Email
+
+Phone
+
+Orders history
+
+Wishlist items
+
+Registration date
+
+Block user
+
+Unblock user
+
+Delete user
+
+---
+
+# INVENTORY MANAGEMENT
+
+Available stock
+
+Out of stock
+
+Low stock alerts
+
+Coming Soon products
+
+Enable or disable product visibility.
+
+---
+
+# CATEGORY MANAGEMENT
+
+Create categories
+
+Edit categories
+
+Delete categories
+
+Upload category image
+
+Change display order
+
+---
+
+# ABOUT PAGE CMS
+
+Fully editable.
+
+Admin should edit:
+
+Journey
+
+Vision
+
+Mission
+
+Team Members
+
+Photos
+
+Descriptions
+
+Timeline
+
+Everything dynamic.
+
+---
+
+# CONTACT PAGE CMS
+
+Editable:
+
+Phone
+
+Email
+
+WhatsApp number
+
+Address
+
+Store timings
+
+Google map URL
+
+Instagram URL
+
+Facebook URL
+
+Store photos
+
+---
+
+# WARRANTY CMS
+
+Manage:
+
+Warranty Hub
+
+Warranty Registration
+
+Warranty Policy
+
+Warranty Terms
+
+Claim Warranty
+
+Add/Edit/Delete content.
+
+---
+
+# MEDIA LIBRARY
+
+Central image manager.
+
+Upload images.
+
+Delete images.
+
+Organize folders.
+
+Search images.
+
+Compress images automatically.
+
+---
+
+# ANALYTICS
+
+Revenue
+
+Users
+
+Orders
+
+Best Selling Products
+
+Traffic Insights
+
+Monthly reports
+
+---
+
+# NOTIFICATIONS
+
+Low stock alert
+
+New order alert
+
+New user alert
+
+Payment success alert
+
+---
+
+# SETTINGS
+
+Website Name
+
+Logo
+
+Favicon
+
+Theme colors
+
+SEO settings
+
+Meta title
+
+Meta description
+
+Google Analytics
+
+Social links
+
+---
+
+# SECURITY
+
+Protected admin routes
+
+Password hashing
+
+Session timeout
+
+Input validation
+
+XSS protection
+
+CSRF protection
+
+Rate limiting
+
+No unauthorized access
+
+---
+
+# DATABASE CONNECTION
+
+Admin Panel and Website must use same APIs and same database.
+
+Any change inside admin should reflect immediately on website without code changes.
+
+Use reusable API architecture.
+
+No hardcoded content.
+
+Everything dynamic.

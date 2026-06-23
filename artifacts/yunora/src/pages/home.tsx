@@ -29,7 +29,7 @@ export default function Home() {
     const t = setInterval(() => {
       setHeroDir(1);
       setHeroIndex(p => (p + 1) % heroImages.length);
-    }, 4000);
+    }, 6000);
     return () => clearInterval(t);
   }, []);
 
@@ -389,32 +389,37 @@ export default function Home() {
       </section>
 
       {/* ─── NEWSLETTER ─── */}
-      <section className="py-20 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)' }}>
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full opacity-10" style={{ background: 'radial-gradient(circle, #FF7A4D, transparent)' }} />
-          <div className="absolute bottom-0 right-1/4 w-64 h-64 rounded-full opacity-8" style={{ background: 'radial-gradient(circle, #FF7A4D, transparent)' }} />
+      <section className="py-20 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #FF7A4D 0%, #FF9A6C 40%, #FFB38A 70%, #FF9A6C 100%)' }}>
+        {/* Decorative circles */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute -top-16 -left-16 w-72 h-72 rounded-full opacity-20" style={{ background: 'radial-gradient(circle, #fff, transparent)' }} />
+          <div className="absolute -bottom-10 -right-10 w-56 h-56 rounded-full opacity-15" style={{ background: 'radial-gradient(circle, #fff, transparent)' }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-10" style={{ background: 'radial-gradient(circle, #fff, transparent)' }} />
         </div>
+        {/* Glossy top strip */}
+        <div className="absolute inset-x-0 top-0 h-1 pointer-events-none" style={{ background: 'rgba(255,255,255,0.35)' }} />
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-5 py-2 mb-6 border border-white/10">
-              <Check className="h-4 w-4 text-primary" />
-              <span className="text-white/80 text-sm font-medium">Join 5000+ Yunora Subscribers</span>
+            <div className="inline-flex items-center gap-2 bg-white/25 backdrop-blur-sm rounded-full px-5 py-2 mb-6 border border-white/40 shadow-sm">
+              <Check className="h-4 w-4 text-white" />
+              <span className="text-white text-sm font-semibold">Join 5000+ Yunora Subscribers</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Stay Updated with Yunora</h2>
-            <p className="text-white/60 mb-10 text-lg">Exclusive deals, new arrivals, and home styling tips delivered to your inbox.</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-md">Stay Updated with Yunora</h2>
+            <p className="text-white/85 mb-10 text-lg font-medium">Exclusive deals, new arrivals, and home styling tips delivered to your inbox.</p>
             <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
               <Input
                 type="email"
                 name="email"
                 placeholder="Enter your email address"
                 required
-                className="h-14 bg-white/10 border-white/20 text-white placeholder:text-white/40 rounded-2xl px-6 flex-1 focus-visible:ring-primary focus-visible:border-primary backdrop-blur-sm"
+                className="h-14 bg-white/90 border-white/60 text-gray-800 placeholder:text-gray-400 rounded-2xl px-6 flex-1 focus-visible:ring-white focus-visible:border-white shadow-md"
               />
               <Button
                 type="submit"
                 disabled={subscribeNewsletter.isPending}
-                className="h-14 rounded-2xl px-8 font-semibold text-white shrink-0 shadow-lg"
-                style={{ background: 'linear-gradient(135deg, #FF7A4D, #e85f2a)', boxShadow: '0 4px 20px rgba(255,122,77,0.4)' }}
+                className="h-14 rounded-2xl px-8 font-bold text-primary shrink-0 bg-white hover:bg-white/90 transition-all shadow-lg"
+                style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.15)' }}
               >
                 {subscribeNewsletter.isPending ? 'Subscribing...' : 'Subscribe'}
               </Button>

@@ -13,6 +13,7 @@ import img_2c2770a8 from '@assets/2c2770a8-de1d-4587-8356-6d2203d2282b_178219123
 import img_bb1 from '@assets/image_1782191247115.png';
 import img_bb2 from '@assets/image_1782191253301.png';
 import img_bb3 from '@assets/image_1782191263151.png';
+import img_hero_sofa from '@assets/download_1782195417073.png';
 
 const IMAGE_MAP: Record<string, string> = {
   'e5e0e026-5762-42f2-8179-798708c0be68_1782191177966.jpg': img_e5e0e026,
@@ -50,7 +51,8 @@ export const categoryImages: Record<string, string> = {
 };
 
 export const heroImages = [
-  { src: img_e78948d9, tag: 'Luxury Sofas', headline: 'Crafting Luxury.', sub: 'Manufacturing Comfort.' },
+  { src: img_hero_sofa, tag: 'Premium Living', headline: 'Crafting Luxury.', sub: 'Manufacturing Comfort.' },
+  { src: img_e78948d9, tag: 'Luxury Sofas', headline: 'Elevate Your', sub: 'Living Space.' },
   { src: img_e5e0e026, tag: 'Orthopedic Mattresses', headline: 'Sleep Better.', sub: 'Live Better.' },
   { src: img_7278f6a4, tag: 'Premium Curtains', headline: 'Dress Your', sub: 'Windows in Style.' },
   { src: img_eb59e23c, tag: 'Designer Sofas', headline: 'Your Home.', sub: 'Your Statement.' },

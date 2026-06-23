@@ -1,54 +1,64 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Tag, Truck, Shield, Star } from 'lucide-react';
+import React from 'react';
 
-const offers = [
-  { icon: Tag, text: 'Factory Direct Pricing — No Middlemen. Save Up to 40%' },
-  { icon: Truck, text: 'Free Delivery on Orders Above ₹5,000 Across India' },
-  { icon: Shield, text: '15 Year Warranty on Select Mattresses. Shop With Confidence' },
-  { icon: Star, text: 'OekoTex Certified Premium Materials. Trusted Since 2018' },
-  { icon: Tag, text: 'Custom Sizes Available. Talk to Our Experts on WhatsApp' },
+const items = [
+  '🔥 Up to 40% Off — Factory Direct Pricing',
+  '✨ Crafted in India · Luxury You Can Feel',
+  '🚚 Free Shipping on Orders Above ₹5,000',
+  '🛡️ 15 Year Warranty on Select Mattresses',
+  '💬 Custom Sizes — Chat with Us on WhatsApp',
+  '⭐ OekoTex Certified Premium Materials',
+  '🏭 Direct from Our Factory · Zero Middlemen',
+  '🎁 Exclusive Deals for New Customers',
 ];
 
+const marqueeText = items.join('   ·   ');
+
 export function OfferStrip() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % offers.length);
-    }, 3500);
-    return () => clearInterval(timer);
-  }, []);
-
-  const Icon = offers[currentIndex].icon;
-
   return (
-    <div className="relative w-full h-10 overflow-hidden flex items-center justify-center" style={{ background: 'linear-gradient(90deg, #e8622a 0%, #FF7A4D 40%, #ff9a6c 60%, #FF7A4D 80%, #e8622a 100%)' }}>
-      {/* Glossy shimmer overlay */}
-      <div className="absolute inset-0 pointer-events-none" style={{
-        background: 'linear-gradient(180deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.04) 50%, rgba(0,0,0,0.08) 100%)',
-      }} />
-      {/* Animated shimmer sweep */}
-      <motion.div
-        className="absolute inset-0 pointer-events-none"
-        style={{ background: 'linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.22) 50%, transparent 70%)' }}
-        animate={{ x: ['-100%', '200%'] }}
-        transition={{ duration: 3, repeat: Infinity, ease: 'linear', repeatDelay: 2 }}
+    <div
+      className="relative w-full overflow-hidden flex items-center"
+      style={{
+        height: '38px',
+        background: 'linear-gradient(90deg, #FF7A4D 0%, #ff9a6c 30%, #FF7A4D 60%, #e8622a 100%)',
+      }}
+    >
+      {/* Glossy top highlight */}
+      <div
+        className="absolute inset-x-0 top-0 h-1/2 pointer-events-none"
+        style={{ background: 'linear-gradient(180deg, rgba(255,255,255,0.22) 0%, transparent 100%)' }}
       />
 
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentIndex}
-          initial={{ y: 18, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -18, opacity: 0 }}
-          transition={{ duration: 0.45, ease: 'easeOut' }}
-          className="flex items-center gap-2 text-white text-xs md:text-sm font-semibold tracking-wide"
+      {/* Scrolling marquee */}
+      <div className="flex w-full overflow-hidden">
+        <div
+          className="flex items-center whitespace-nowrap"
+          style={{ animation: 'marqueeScroll 38s linear infinite' }}
         >
-          <Icon className="h-3.5 w-3.5 opacity-90 flex-shrink-0" />
-          <span style={{ textShadow: '0 1px 2px rgba(0,0,0,0.2)' }}>{offers[currentIndex].text}</span>
-        </motion.div>
-      </AnimatePresence>
+          {/* Duplicate for seamless loop */}
+          {[0, 1].map((dupe) => (
+            <span key={dupe} className="flex items-center gap-0">
+              {items.map((item, i) => (
+                <React.Fragment key={`${dupe}-${i}`}>
+                  <span
+                    className="text-white font-semibold text-xs md:text-sm px-6"
+                    style={{ textShadow: '0 1px 3px rgba(0,0,0,0.2)', letterSpacing: '0.02em' }}
+                  >
+                    {item}
+                  </span>
+                  <span className="text-white/50 text-sm">|</span>
+                </React.Fragment>
+              ))}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <style>{`
+        @keyframes marqueeScroll {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style>
     </div>
   );
 }

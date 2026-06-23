@@ -1,0 +1,373 @@
+# WEBSITE + ADMIN + API CONNECTION MASTER PROMPT
+
+The public website and admin panel must be fully connected.
+
+Do NOT create separate hardcoded systems.
+
+Both website and admin panel must use:
+
+* Same Database
+* Same APIs
+* Same Product Collections
+* Same User Collections
+* Same Settings Collections
+
+Technology:
+
+React + TypeScript
+
+Supabase (preferred) or Firebase
+
+REST APIs or Server Actions
+
+Reusable architecture
+
+Everything must be dynamic.
+
+No hardcoded text.
+
+---
+
+# DATA FLOW
+
+Admin → Database → Website
+
+Whenever admin updates anything:
+
+Changes should immediately appear on website.
+
+No manual coding required.
+
+No redeployment required.
+
+---
+
+# PRODUCTS
+
+All products currently displayed on website must automatically appear inside admin.
+
+Admin can:
+
+Add product
+
+Edit product
+
+Delete product
+
+Hide product
+
+Publish product
+
+Change stock
+
+Change images
+
+Change descriptions
+
+Change prices
+
+Change categories
+
+Website should instantly update.
+
+---
+
+# HOME PAGE CONTENT
+
+Current homepage content should be stored in database.
+
+Admin should edit:
+
+Hero section
+
+Banner images
+
+Buttons
+
+Offer strip
+
+Categories
+
+Featured products
+
+Why Choose Yunora section
+
+Popup content
+
+Website reads data from database.
+
+---
+
+# ABOUT PAGE
+
+Move all About page content into database.
+
+Admin can edit everything.
+
+Website fetches content dynamically.
+
+---
+
+# CONTACT PAGE
+
+Store:
+
+Phone
+
+Email
+
+Address
+
+Map URL
+
+Instagram URL
+
+Facebook URL
+
+WhatsApp Number
+
+Store images
+
+Admin edits database.
+
+Website updates automatically.
+
+---
+
+# WARRANTY PAGES
+
+Store all warranty sections inside database.
+
+Admin edits.
+
+Website updates instantly.
+
+---
+
+# BLOGS
+
+Blogs stored in database.
+
+Website fetches dynamically.
+
+---
+
+# REVIEWS
+
+Reviews stored in database.
+
+Admin approves or edits reviews.
+
+Website updates instantly.
+
+---
+
+# SETTINGS COLLECTION
+
+Create one Settings table.
+
+Store:
+
+Website Name
+
+Logo
+
+Favicon
+
+Theme Colors
+
+Social Links
+
+SEO Settings
+
+Offer Strip Text
+
+Popup Settings
+
+All pages use this data.
+
+---
+
+# IMAGE MANAGEMENT
+
+Images uploaded from admin should:
+
+Save in storage.
+
+Store URL inside database.
+
+Website should display uploaded image automatically.
+
+Support:
+
+Hero images
+
+Product images
+
+About images
+
+Blog images
+
+Category images
+
+Banner images
+
+---
+
+# APIs
+
+Create reusable APIs:
+
+GET Products
+
+POST Product
+
+UPDATE Product
+
+DELETE Product
+
+GET Categories
+
+GET Reviews
+
+GET Blogs
+
+GET Settings
+
+GET Orders
+
+GET Users
+
+All APIs should be shared by website and admin.
+
+---
+
+# DATABASE STRUCTURE
+
+Collections:
+
+products
+
+categories
+
+users
+
+orders
+
+reviews
+
+blogs
+
+settings
+
+homepage
+
+about
+
+contact
+
+warranty
+
+coupons
+
+appointments
+
+enquiries
+
+partners
+
+notifications
+
+inventory
+
+suppliers
+
+employees
+
+site_measurements
+
+loyalty_points
+
+referrals
+
+activity_logs
+
+backups
+
+---
+
+# REAL TIME UPDATES
+
+Use realtime listeners.
+
+When admin changes data:
+
+Website updates automatically.
+
+No refresh required if possible.
+
+---
+
+# DELETE PROTECTION
+
+Before deleting:
+
+Show confirmation popup.
+
+Prevent accidental deletion.
+
+Soft delete preferred.
+
+---
+
+# ACTIVITY LOGS
+
+Track:
+
+Who edited data
+
+Date
+
+Time
+
+Action performed
+
+Store logs in database.
+
+---
+
+# BACKUP SYSTEM
+
+Before major delete operations:
+
+Create backup.
+
+Allow restore.
+
+---
+
+# SECURITY
+
+Protect APIs.
+
+Validate input.
+
+Role based permissions.
+
+Admin only routes.
+
+Hash passwords.
+
+Session timeout.
+
+Prevent unauthorized access.
+
+---
+
+# IMPORTANT
+
+All content currently present on the website must automatically be available inside admin for editing.
+
+Nothing should remain hardcoded.
+
+Admin and website must always stay synchronized.
