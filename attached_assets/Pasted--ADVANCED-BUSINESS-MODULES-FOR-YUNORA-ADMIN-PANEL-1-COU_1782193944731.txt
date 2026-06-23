@@ -1,0 +1,375 @@
+# ADVANCED BUSINESS MODULES FOR YUNORA ADMIN PANEL
+
+---
+
+# 1. COUPON MANAGEMENT SYSTEM
+
+Admin should be able to:
+
+Create coupon codes
+
+Edit coupon codes
+
+Delete coupons
+
+Enable/Disable coupons
+
+Set:
+
+Coupon Name
+
+Coupon Code
+
+Discount Percentage
+
+Flat Discount
+
+Minimum Order Value
+
+Maximum Discount Amount
+
+Expiry Date
+
+Usage Limit
+
+Single Use Per Customer
+
+Applicable Categories
+
+Applicable Products
+
+Dashboard should show:
+
+Active Coupons
+
+Expired Coupons
+
+Coupon Usage Count
+
+Revenue Generated Through Coupons
+
+---
+
+# 2. WHATSAPP ORDER NOTIFICATION SYSTEM
+
+Automatically send WhatsApp messages for:
+
+Order Placed
+
+Payment Successful
+
+Order Confirmed
+
+Order Processing
+
+Order Shipped
+
+Order Delivered
+
+Cancellation
+
+Customization Requests
+
+Message templates should be editable from admin.
+
+Admin can:
+
+Enable notifications
+
+Disable notifications
+
+Edit templates
+
+Preview messages
+
+---
+
+# 3. GST INVOICE GENERATOR
+
+Generate professional GST invoices.
+
+Include:
+
+Company Logo
+
+Customer Details
+
+Order Number
+
+Invoice Number
+
+GST Number
+
+Product Details
+
+Quantity
+
+Price
+
+Tax Amount
+
+Grand Total
+
+Payment Status
+
+Generate PDF.
+
+Allow:
+
+Download
+
+Print
+
+Email invoice
+
+---
+
+# 4. BULK PRODUCT IMPORT SYSTEM
+
+Upload Excel file.
+
+Automatically create products.
+
+Supported fields:
+
+Product Name
+
+Category
+
+Price
+
+Description
+
+Stock
+
+Size Options
+
+Color Options
+
+Warranty
+
+Images
+
+SKU
+
+Discount
+
+Admin should also:
+
+Export products
+
+Update products in bulk
+
+Download sample Excel template
+
+---
+
+# 5. BLOG CMS
+
+Admin should:
+
+Create blogs
+
+Edit blogs
+
+Delete blogs
+
+Schedule blogs
+
+Upload blog images
+
+Add tags
+
+SEO fields
+
+Blog categories:
+
+Sleep Tips
+
+Mattress Guide
+
+Curtain Ideas
+
+Interior Inspiration
+
+Home Furnishing Tips
+
+The blog page should be SEO friendly.
+
+---
+
+# 6. SEO MANAGER
+
+Admin should edit:
+
+Meta Title
+
+Meta Description
+
+Keywords
+
+Open Graph Image
+
+Canonical URL
+
+Schema Markup
+
+Robots Settings
+
+Sitemap
+
+Social Share Preview
+
+Page-specific SEO support.
+
+---
+
+# 7. CUSTOMER ENQUIRY MANAGEMENT
+
+Store all enquiries.
+
+Fields:
+
+Name
+
+Phone
+
+Email
+
+Message
+
+Product Interest
+
+Date
+
+Status
+
+Admin actions:
+
+Mark as New
+
+Mark as Contacted
+
+Mark as Closed
+
+Search enquiries
+
+Filter enquiries
+
+---
+
+# 8. DEALER / ARCHITECT PARTNER PANEL
+
+Create separate partner registrations.
+
+Fields:
+
+Company Name
+
+Name
+
+Phone
+
+Email
+
+Address
+
+Business Type
+
+Admin can:
+
+Approve partners
+
+Reject partners
+
+Assign special pricing
+
+View partner orders
+
+Track partner activities
+
+---
+
+# 9. APPOINTMENT BOOKING SYSTEM
+
+Users can book:
+
+Showroom Visit
+
+Consultation
+
+Product Demo
+
+Admin should view:
+
+Upcoming Appointments
+
+Completed Appointments
+
+Cancelled Appointments
+
+Fields:
+
+Name
+
+Phone
+
+Date
+
+Time
+
+Purpose
+
+Notes
+
+Calendar view supported.
+
+---
+
+# 10. SITE MEASUREMENT REQUEST SYSTEM
+
+Users can request home measurements.
+
+Fields:
+
+Name
+
+Phone
+
+Address
+
+City
+
+Preferred Date
+
+Product Type
+
+Special Notes
+
+Admin can:
+
+Assign staff
+
+Update status
+
+Completed
+
+Pending
+
+Cancelled
+
+Store all records.
+
+---
+
+# DATABASE CONNECTION
+
+All modules must use the same database as the website.
+
+No hardcoded values.
+
+Everything dynamic.
+
+Every change should reflect automatically.
+
+Use reusable APIs and clean architecture.

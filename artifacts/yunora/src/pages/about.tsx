@@ -1,130 +1,164 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { CheckCircle2, Factory, Award, Star, Users, ArrowRight } from 'lucide-react';
 import { Link } from 'wouter';
-import { CheckCircle2 } from 'lucide-react';
-
+import { Button } from '@/components/ui/button';
 import heroImg from '@assets/e78948d9-787e-4d94-ba0f-dddc6690730c_1782191160787.jpg';
 import mattressImg from '@assets/e5e0e026-5762-42f2-8179-798708c0be68_1782191177966.jpg';
+import curtainImg from '@assets/7278f6a4-3588-4878-8043-12715e50fd5b_1782191234202.jpg';
+import sofaImg from '@assets/eb59e23c-77b3-4e9e-aad6-36d4f319a4be_1782191151335.jpg';
+
+const stats = [
+  { val: '2018', label: 'Year Founded' },
+  { val: '5000+', label: 'Happy Homes' },
+  { val: '15 Yr', label: 'Max Warranty' },
+  { val: '100%', label: 'Factory Direct' },
+];
+
+const reasons = [
+  { icon: Factory, title: 'Factory Direct', desc: 'We design, manufacture and sell directly. No middlemen means you save up to 40% over retail prices without compromising on quality.' },
+  { icon: Award, title: 'Certified Materials', desc: 'OekoTex certified high-GSM fabrics, high-density orthopedic foam, and premium stitching — every material we use passes rigorous quality standards.' },
+  { icon: CheckCircle2, title: 'Custom Manufacturing', desc: 'Your sofa, mattress, or curtain — made to your exact dimensions. We accommodate any custom size with no minimum order quantity.' },
+  { icon: Star, title: 'Industry-Leading Warranty', desc: 'Up to 15 years warranty on select mattresses. We stand behind every product because we build them to last a lifetime.' },
+  { icon: Users, title: 'Trusted Since 2018', desc: 'From a small unit in Palanpur to thousands of satisfied customers across India — our growth is built on trust, quality, and word of mouth.' },
+  { icon: ArrowRight, title: 'Pan India Delivery', desc: 'Fast and safe delivery to your doorstep across India. Free delivery on orders above ₹5,000, with professional installation available.' },
+];
 
 export default function About() {
   return (
     <div className="bg-white">
       {/* Hero */}
-      <div className="relative h-[60vh] min-h-[500px] w-full flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img src={heroImg} alt="Yunora Factory" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
-        <div className="container relative z-10 text-center px-4">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-4"
-          >
+      <div className="relative h-[70vh] min-h-[520px] w-full flex items-end overflow-hidden">
+        <img src={heroImg} alt="Yunora" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%)' }} />
+        <div className="relative z-10 container mx-auto px-6 lg:px-10 pb-16">
+          <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="text-primary font-semibold text-sm uppercase tracking-widest mb-3">
+            Our Story
+          </motion.p>
+          <motion.h1 initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight">
             About Yunora Universal
           </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-xl text-white/90 max-w-2xl mx-auto font-medium"
-          >
-            Manufacturing Premium Comfort, Crafting Beautiful Homes Since 2018
+          <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-white/80 text-lg md:text-xl max-w-2xl font-light leading-relaxed">
+            Manufacturing Premium Comfort, Crafting Beautiful Homes Since 2018 — from Palanpur, Gujarat to homes across India.
           </motion.p>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-20 lg:py-32">
-        {/* Our Story */}
-        <div className="flex flex-col lg:flex-row gap-16 items-center mb-32">
-          <div className="lg:w-1/2">
-            <h2 className="text-sm font-bold text-primary tracking-widest uppercase mb-3">Our Story</h2>
-            <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">From a small unit in Palanpur to homes across India.</h3>
-            <div className="text-gray-600 text-lg space-y-6 leading-relaxed">
+      {/* Stats bar */}
+      <div className="bg-gray-950">
+        <div className="container mx-auto px-4 py-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {stats.map((s, i) => (
+              <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
+                <div className="text-3xl font-bold text-primary mb-1">{s.val}</div>
+                <div className="text-gray-400 text-sm font-medium">{s.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Our Story */}
+      <div className="container mx-auto px-4 py-20 lg:py-28">
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
+          <motion.div initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            <p className="text-primary font-bold text-xs uppercase tracking-widest mb-3">From Our Factory to Your Home</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">A small unit in Palanpur. A dream of premium comfort for every Indian home.</h2>
+            <div className="text-gray-600 text-base space-y-5 leading-relaxed">
               <p>
-                Founded in 2018 in Palanpur, Gujarat, Yunora Universal began with a simple mission — to bring factory-direct premium home furnishings to every Indian home.
+                Yunora Universal was founded in 2018 in Palanpur, Gujarat, with a clear and powerful mission — bring factory-direct luxury home furnishings to Indian households at prices that make sense.
               </p>
               <p>
-                What started as a small manufacturing unit has grown into a trusted brand serving thousands of happy customers across India. By cutting out the middlemen, we ensure that premium materials and expert craftsmanship remain accessible and affordable.
+                We started with mattresses. The idea was simple: why should an Indian family pay 2–3x the manufacturing cost just because of middlemen and distributor margins? By building our own factory and selling directly to consumers, we eliminated that gap entirely.
+              </p>
+              <p>
+                Today, Yunora crafts premium mattresses, designer sofas, curtains, pillows, bean bags, and more — all manufactured under one roof in Gujarat and delivered across India. Every product is a direct expression of our commitment to quality, craftsmanship, and honest pricing.
+              </p>
+              <p>
+                Over 5,000 homes trust Yunora. Families in Ahmedabad, Mumbai, Delhi, Surat, and beyond sleep on our mattresses, sit on our sofas, and live inside our curtains every single day. That trust is our greatest achievement.
               </p>
             </div>
-          </div>
-          <div className="lg:w-1/2">
-            <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
-              <img src={mattressImg} alt="Yunora Mattress Crafting" className="w-full h-auto object-cover aspect-[4/3]" />
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay" />
+            <Link href="/shop">
+              <Button className="mt-8 rounded-xl h-12 px-8 font-semibold gap-2" style={{ background: 'linear-gradient(135deg, #FF7A4D, #e85f2a)' }}>
+                Shop Our Products <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="grid grid-cols-2 gap-4">
+            <div className="rounded-3xl overflow-hidden aspect-[3/4] shadow-xl">
+              <img src={mattressImg} alt="Yunora Mattress" className="w-full h-full object-cover" />
             </div>
-          </div>
+            <div className="rounded-3xl overflow-hidden aspect-[3/4] shadow-xl mt-8">
+              <img src={curtainImg} alt="Yunora Curtains" className="w-full h-full object-cover" />
+            </div>
+          </motion.div>
         </div>
 
         {/* Vision & Mission */}
-        <div className="grid md:grid-cols-2 gap-8 mb-32">
-          <div className="bg-gray-50 p-10 md:p-14 rounded-[2rem] border border-gray-100">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              "To be India's most trusted luxury home furnishing brand, making premium comfort accessible to every Indian home."
+        <div className="grid md:grid-cols-2 gap-8 mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="relative rounded-3xl overflow-hidden p-10 md:p-12" style={{ background: 'linear-gradient(135deg, #FF7A4D, #e85f2a)' }}>
+            <div className="absolute top-0 right-0 w-48 h-48 rounded-full opacity-10" style={{ background: 'radial-gradient(circle, white, transparent)', transform: 'translate(30%, -30%)' }} />
+            <p className="text-white/70 text-xs font-bold uppercase tracking-widest mb-4">Our Vision</p>
+            <h3 className="text-2xl font-bold text-white mb-4 leading-snug">India's Most Trusted Luxury Home Brand</h3>
+            <p className="text-white/80 text-base leading-relaxed">
+              "To be India's most trusted luxury home furnishing brand — making premium comfort accessible, authentic, and affordable for every Indian home."
             </p>
-          </div>
-          <div className="bg-primary/5 p-10 md:p-14 rounded-[2rem] border border-primary/10">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              "Manufacturing world-class home furnishings with precision, care, and craftsmanship — delivered directly to you at factory prices."
+          </motion.div>
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="bg-gray-950 rounded-3xl p-10 md:p-12">
+            <p className="text-primary text-xs font-bold uppercase tracking-widest mb-4">Our Mission</p>
+            <h3 className="text-2xl font-bold text-white mb-4 leading-snug">Manufacture. Deliver. Delight.</h3>
+            <p className="text-gray-400 text-base leading-relaxed">
+              "To manufacture world-class home furnishings with precision, care, and uncompromising craftsmanship — and deliver them directly to you at factory prices, backed by India's strongest warranty."
             </p>
-          </div>
+          </motion.div>
         </div>
 
-        {/* Why Choose Us */}
-        <div className="mb-32">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Why Choose Yunora</h2>
-            <p className="text-lg text-gray-600">The pillars of our manufacturing excellence</p>
+        {/* Why Choose Yunora */}
+        <div className="mb-24">
+          <div className="text-center mb-14">
+            <p className="text-primary font-semibold text-xs uppercase tracking-widest mb-2">Why Us</p>
+            <h2 className="text-4xl font-bold text-gray-900">The Yunora Difference</h2>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ReasonCard title="Factory Direct" desc="No middlemen, direct from factory to your home ensuring the best prices." />
-            <ReasonCard title="Premium Quality" desc="Certified materials, rigorous quality checks at every step of manufacturing." />
-            <ReasonCard title="Custom Sizes" desc="Made to measure for your space, because every home is unique." />
-            <ReasonCard title="Since 2018" desc="6+ years of manufacturing excellence and thousands of satisfied customers." />
-            <ReasonCard title="15 Year Warranty" desc="Industry-leading warranty on select mattress products for total peace of mind." />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {reasons.map((r, i) => {
+              const Icon = r.icon;
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.07 }}
+                  className="group bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-400"
+                >
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-orange-500 flex items-center justify-center mb-5 shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <Icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{r.title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">{r.desc}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
 
         {/* What We Make */}
-        <div className="bg-gray-900 text-white rounded-[2.5rem] p-10 lg:p-20">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">What We Make</h2>
-            <p className="text-lg text-gray-400">Manufactured with precision in Palanpur</p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
-            <ProductPill text="Premium Mattresses" />
-            <ProductPill text="Luxury Pillows" />
-            <ProductPill text="Designer Sofas" />
-            <ProductPill text="Curtains & Blinds" />
-            <ProductPill text="Bean Bags" />
-            <ProductPill text="Bedsheets" />
+        <div className="relative rounded-[2.5rem] overflow-hidden">
+          <img src={sofaImg} alt="Yunora Products" className="w-full h-80 object-cover" />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 100%)' }} />
+          <div className="absolute inset-0 flex flex-col items-center justify-center px-8 py-14 text-center">
+            <p className="text-primary font-semibold text-xs uppercase tracking-widest mb-3">Manufactured in Palanpur, Gujarat</p>
+            <h2 className="text-3xl font-bold text-white mb-8">What We Make</h2>
+            <div className="flex flex-wrap gap-3 justify-center">
+              {['Premium Mattresses', 'Orthopedic Mattresses', 'Memory Foam', 'Luxury Pillows', 'Designer Sofas', 'Sectional Sofas', 'Blackout Curtains', 'Bean Bags', 'Cushions', 'Bedsheets'].map(item => (
+                <div key={item} className="bg-white/10 backdrop-blur-md border border-white/20 py-2 px-5 rounded-full text-white text-sm font-medium hover:bg-white/20 transition-colors">
+                  {item}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-}
-
-function ReasonCard({ title, desc }: { title: string, desc: string }) {
-  return (
-    <div className="bg-white border border-gray-100 p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-shadow duration-300">
-      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-6">
-        <CheckCircle2 className="h-6 w-6" />
-      </div>
-      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 leading-relaxed">{desc}</p>
-    </div>
-  );
-}
-
-function ProductPill({ text }: { text: string }) {
-  return (
-    <div className="bg-white/10 backdrop-blur-md border border-white/20 py-4 px-6 rounded-2xl font-medium text-white hover:bg-white/20 transition-colors">
-      {text}
     </div>
   );
 }

@@ -10,17 +10,15 @@ export function AuthPopup() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Check if the user has seen the popup in this session
     const hasSeenPopup = sessionStorage.getItem('yunora_auth_popup_seen');
-    
     if (!isAuthenticated && !hasSeenPopup) {
       const timer = setTimeout(() => {
         setIsOpen(true);
         sessionStorage.setItem('yunora_auth_popup_seen', 'true');
       }, 3000);
-      
       return () => clearTimeout(timer);
     }
+    return undefined;
   }, [isAuthenticated]);
 
   return (
